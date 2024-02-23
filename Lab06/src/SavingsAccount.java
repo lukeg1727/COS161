@@ -1,10 +1,10 @@
 
 public class SavingsAccount extends BankAccount {
 	
-	double interestRate;
+	private double interestRate;
 	
-	SavingsAccount(String name, String ID, double balance) {
-		super(name, ID, balance);
+	SavingsAccount(String acctName, String acctID, double acctBalance) {
+		super(acctName, acctID, acctBalance);
 		interestRate = 0.05;
 	}
 	
@@ -12,6 +12,6 @@ public class SavingsAccount extends BankAccount {
 		super.deposit(super.getAcctBalance() * interestRate);
 	}
 	public String toString() {
-		
+		return super.toString() + ", Interest Rate: " + interestRate;
 	}
 }
